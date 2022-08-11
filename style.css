@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #000;
+}
+
+.star-checked {
+    position: relative;
+    width: 400px;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.star-checked .star-post{
+    display: none;
+}
+
+.star-checked .star-post-text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+.star-checked .star-post-edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.star-checked .star-post-edit i{
+    color: #666;
+    font-size: 20px;
+}
+.star-checked .star-post-edit:hover i{
+    color: #444;
+}
+
+
+.star-checked .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.star-widget input:not(:checked)~label:hover,
+.star-widget input:not(:checked)~label:hover~label {
+    color: #fd4;
+}
+
+.star-widget input:checked~label {
+    color: #fd4;
+}
+
+.star-widget input#star-widget-rate-5:checked~label {
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+#star-widget-rate-1:checked ~ .star-widget-form span::before{
+    content: "I just hate it 😣";
+}
+#star-widget-rate-2:checked ~ .star-widget-form span::before{
+    content: "I dont't like it 😒";
+}
+#star-widget-rate-3:checked ~ .star-widget-form span::before{
+    content: "I is awesome 😄";
+}
+#star-widget-rate-4:checked ~ .star-widget-form span::before{
+    content: "I just like it 😎";
+}
+#star-widget-rate-5:checked ~ .star-widget-form span::before{
+    content: "I just love it 😍";
+}
+
+.star-widget-form{
+    display: none;
+}
+
+.star-widget input:checked ~ .star-widget-form{
+    display: block;
+}
+
+.star-widget-form span {
+    display: inline-block;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 10px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+
+
+.star-widget-textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+.star-widget-textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
+
+textarea::-webkit-scrollbar{
+    width: 17px;
+}
+textarea::-webkit-scrollbar-track{
+    background: #333;
+}
+textarea::-webkit-scrollbar-thumb{
+    background: #222;
+    border: 5px solid #333;
+    border-radius: 10px;
+}
+
+.star-widget-btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.star-widget-btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.star-widget-btn button:hover{
+    background: #1b1b1b;
+}
